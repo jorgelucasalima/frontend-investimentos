@@ -8,9 +8,10 @@ import Table from './components/Table';
 
 import { AtivoProvider } from './contexts/AtivoContext';
 import { CompraProvider } from './contexts/CompraContext';
+import { VendaProvider } from './contexts/VendaContext';
 
 import Modal from 'react-modal';
-import { VendaProvider } from './contexts/VendaContext';
+import PieChart from './components/PieChart';
 
 Modal.setAppElement('#root');
 
@@ -26,7 +27,7 @@ function App() {
             <Dashboard />
 
             <ContentMain>
-              <Card title="Carteira" content="R$ 0,00" />
+              <Card title="" content={<PieChart />}/>
               <Table />
             </ContentMain>
 
@@ -79,7 +80,7 @@ const ContentMain = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 10px;
   
   // Card ocupará 40% da largura do container
   & > div:first-child {
