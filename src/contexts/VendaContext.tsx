@@ -8,16 +8,17 @@ interface Venda {
   quantidade: number;
 }
 
-interface VendaContextData {
+interface VendaContextProps {
   vendas: Venda[];
   setVendas: React.Dispatch<React.SetStateAction<Venda[]>>;
   handleSubmitVenda: () => Promise<void>;
-  openModalVenda: () => void;
   modalIsOpenVenda: boolean;
+  setIsOpenVenda: React.Dispatch<React.SetStateAction<boolean>>;
+  openModalVenda: () => void;
   closeModalVenda: () => void;
 }
 
-export const VendaContext = createContext<VendaContextData>({} as VendaContextData);
+export const VendaContext = createContext<VendaContextProps>({} as VendaContextProps);
 
 export const VendaProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
@@ -62,8 +63,9 @@ export const VendaProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         vendas,
         setVendas,
         handleSubmitVenda,
-        openModalVenda,
         modalIsOpenVenda,
+        setIsOpenVenda,
+        openModalVenda,
         closeModalVenda
       }}
     >

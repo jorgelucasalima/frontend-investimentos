@@ -10,6 +10,7 @@ import { AtivoProvider } from './contexts/AtivoContext';
 import { CompraProvider } from './contexts/CompraContext';
 
 import Modal from 'react-modal';
+import { VendaProvider } from './contexts/VendaContext';
 
 Modal.setAppElement('#root');
 
@@ -18,20 +19,20 @@ function App() {
   return (
     <>
       <AtivoProvider>
-      <CompraProvider>
+        <CompraProvider>
+          <VendaProvider>
+            <GlobalStyle />
+            <Header />
+            <Dashboard />
 
-        <GlobalStyle />
-        <Header />
-        <Dashboard />
+            <ContentMain>
+              <Card title="Carteira" content="R$ 0,00" />
+              <Table />
+            </ContentMain>
 
-        <ContentMain>
-          <Card title="Carteira" content="R$ 0,00" />
-          <Table />
-        </ContentMain>
-
-        <Footer/>
-
-      </CompraProvider>
+            <Footer/>
+          </VendaProvider>
+        </CompraProvider>
       </AtivoProvider>
     </>
   )

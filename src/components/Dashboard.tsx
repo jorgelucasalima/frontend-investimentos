@@ -15,6 +15,7 @@ export default function Dashboard() {
   const { compras } = useCompra()
   const { vendas } = useVenda()
   console.log(vendas)
+
   const [comprasDoMesAtual, setComprasDoMesAtual] = useState<Compra[]>([]);
   const [vendasDoMesAtual, setVendasDoMesAtual] = useState<Venda[]>([]);
 

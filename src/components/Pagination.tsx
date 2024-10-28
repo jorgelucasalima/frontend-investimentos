@@ -84,7 +84,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0.5rem;
-  gap: 0.5rem;
+ // gap: 0.5rem;
 `;
 
 const ResultText = styled.div`
@@ -95,7 +95,7 @@ const ResultText = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  //gap: 0.25rem;
 `;
 
 const BaseButton = styled.button`
