@@ -1,9 +1,18 @@
 import styled from "styled-components";
 
+interface FilterProps {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-export default function Filter() {
+export default function Filter({ value, onChange }: FilterProps) {
   return (
-    <Input type="text" placeholder="Buscar ativo" />
+    <Input 
+      type="text" 
+      placeholder="Buscar ativo" 
+      value={value}
+      onChange={ onChange }
+    />
   );
 }
 

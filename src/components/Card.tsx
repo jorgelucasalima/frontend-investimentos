@@ -26,7 +26,6 @@ const Container = styled.div`
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 `
 const Content = styled.div`
-  padding: 0 20px;
 
   h4{
     color: var(--text-color);
